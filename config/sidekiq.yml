@@ -1,0 +1,5 @@
+:scheduler:
+  :schedule:
+    sync_listings:
+      :cron: "0 0 * * *"
+      :class: SyncListingsJob
