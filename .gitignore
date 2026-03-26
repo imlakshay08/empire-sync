@@ -10,7 +10,6 @@
 # Ignore all environment files (except templates).
 /.env*
 !/.env*.erb
-
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -33,3 +32,4 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+/config/google_credentials.json

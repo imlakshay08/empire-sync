@@ -14,5 +14,8 @@ class ListingSyncService
           listing.update(hubspot_deal_id: deal_id)
         end
       end
+
+      GoogleSheetsService.export(Listing.all)
+
     end
   end

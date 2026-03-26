@@ -14,6 +14,8 @@ RSpec.describe ListingSyncService do
     before do
       allow(EmpireFlippersService).to receive(:fetch_listings).and_return(fake_listings)
       allow(HubspotService).to receive(:create_deal).and_return("hs_deal_123")
+      allow(GoogleSheetsService).to receive(:export)
+
     end
 
     it "syncs listings from Empire Flippers" do

@@ -1,0 +1,2 @@
+class GoogleSheetReference < ApplicationRecord
+end

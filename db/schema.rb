@@ -10,9 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_03_22_132622) do
+ActiveRecord::Schema[7.1].define(version: 2026_03_25_162425) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "google_sheet_references", force: :cascade do |t|
+    t.string "sheet_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "listings", force: :cascade do |t|
     t.integer "listing_number"
@@ -22,6 +28,7 @@ ActiveRecord::Schema[7.1].define(version: 2026_03_22_132622) do
     t.string "hubspot_deal_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "average_monthly_net_profit"
     t.index ["listing_number"], name: "index_listings_on_listing_number", unique: true
   end
 
